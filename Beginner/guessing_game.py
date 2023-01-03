@@ -20,6 +20,7 @@ privous_guess=0
 while True: 
     privous_guess = user_input
     user_input = int(input('Guess a number between 1 and 100: '))
+    
     if user_input == rand_num:
         print(f'Yay! You have got the number in {guesses} guesses.')
         break
@@ -27,6 +28,8 @@ while True:
         print('Input OUT OF BOUND!')
         continue
     diff = abs(user_input - rand_num)
+    
+    # Checking first time guess
     if guesses ==0:
         if diff <=0 and guesses == 0:
             print('WARM!')
